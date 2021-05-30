@@ -1,0 +1,36 @@
+@mixin body-container-style-default() {
+    #body-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+}
+
+body {
+
+    background-image: url("../images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+
+
+@include body-container-style-default();
+
+@media screen and (max-width: 768px) {
+    @include body-container-style-default();
+
+    #pattern-circles {
+        margin-top: 10%;
+    }
+}
+
+//////desktop view
+@media screen and (max-width: 1440px) {
+    @include body-container-style-default();
+
+    #pattern-circles {
+        margin-top: 5%;
+    }
+}

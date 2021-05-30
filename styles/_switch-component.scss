@@ -1,0 +1,52 @@
+$switch-component-margin-top-bottom:40px;
+
+@mixin switchElementStyle() {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flexSwitchCheckStyle() {
+    width: 40px;
+    height: 20px;
+}
+
+.col-5 {
+    margin: 0;
+    padding: 0;
+}
+
+#switch {
+
+    // @include switchSectionStyle();
+    .switch-elements {
+        @include switchElementStyle();
+    }
+
+}
+
+#monthly-billing {
+    text-align: right;
+}
+
+#switch-check {
+    #flexSwitchCheck {
+        @include flexSwitchCheckStyle();
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#yearly-billing {
+    text-align: left;
+}
+
+
+///////tablet-desktop view
+
+@media screen and (min-width: 768px) {
+
+    .switch-custimized {
+        padding-left: 20px !important;
+    }
+
+}

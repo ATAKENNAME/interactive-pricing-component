@@ -1,0 +1,110 @@
+$textSize : 15px;
+$dollarSize:26px;
+$badge-text-size:10px;
+$headerSize:20px;
+$header-tablet-font-size:30px;
+$dollar-tablet-font-size:40px;
+
+@mixin header-font-size-in-lg-screens () {
+    h1 {
+        font-size: $header-tablet-font-size;
+        font-weight: 800;
+    }
+}
+
+h1 {
+    font-size: $headerSize;
+    font-weight: 800;
+}
+
+.text {
+    font-size: $textSize;
+    color: hsl(225, 20%, 60%);
+}
+
+.text-spacing {
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    // font-weight: 600;
+    background-color: hsl(230, 100%, 99%);
+    cursor: pointer;
+}
+
+#pricing-container {
+    box-shadow: 0 8px 30px -20px hsla(225, 20%, 60%, 0.9);
+    background-color: rgb(255, 255, 255);
+
+    // hsl (0, 0%, 100%)
+    .badge-customized {
+        padding: 4px;
+        width: 35px;
+        height: 20px;
+        font-size: $badge-text-size;
+        color: hsl(15, 100%, 70%);
+        background-color: hsl(14, 92%, 95%);
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        appearance: none;
+        background: hsl(174, 77%, 80%);
+
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        box-shadow: 0px 8px 15px 0px hsl(174, 77%, 80%) !important;
+        background: hsl(174, 86%, 45%);
+        background-image: url("../images/icon-slider.svg") !important;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    // input[type="range"]::-moz-range-progress {
+    //     background-color: hsl(174, 77%, 80%);
+    //     ;
+
+    // }
+
+
+    #dollar {
+        font-size: $dollarSize;
+    }
+
+    input[type="checkbox"]:checked {
+        box-shadow: none !important;
+        border: none;
+        background-color: hsl(174, 86%, 45%);
+    }
+
+
+    .fas {
+        color: hsl(174, 86%, 45%);
+    }
+
+    .btn-custom {
+        background-color: hsl(227, 35%, 25%);
+        color: hsl(226, 100%, 87%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    @include header-font-size-in-lg-screens();
+
+
+    #dollar {
+        font-size: $dollar-tablet-font-size !important;
+    }
+}
+
+@media screen and (min-width: 1447px) {
+    @include header-font-size-in-lg-screens();
+
+}

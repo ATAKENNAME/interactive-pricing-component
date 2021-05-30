@@ -1,0 +1,93 @@
+@import "./switch-component";
+@import "./rang-form-component";
+@import "./pageview-component";
+@import "./button-component";
+@import "./pricing-component";
+@import "./list-component";
+
+
+$component-margin-in-between: 30px;
+
+@mixin pricingContrainerStyle () {
+    width: 350px;
+    margin: 10% auto;
+    border-radius: 15px;
+}
+
+@mixin pricing-container-in-lg-screen() {
+    #pricing-container {
+        @include pricingContrainerStyle();
+        margin: 5% auto;
+        width: 600px;
+    }
+}
+
+@mixin top-container-in-lg-screen() {
+    #top-container {
+        position: relative;
+        width: 100%;
+        height: 200px;
+
+    }
+}
+
+@mixin buttom-container-in-lg-screen() {
+    #bottom-container {
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
+
+///pricing-container
+#pricing-container {
+    @include pricingContrainerStyle();
+}
+
+/// magin between components
+#form,
+#pricing,
+#list,
+#button {
+    margin: $component-margin-in-between;
+}
+
+
+
+////////tablet-desktop view
+
+@media screen and (min-width: 768px) {
+    @include pricing-container-in-lg-screen();
+    @include top-container-in-lg-screen();
+    @include buttom-container-in-lg-screen();
+
+    #form,
+    #pricing,
+    #list,
+    #button {
+        margin: 0;
+    }
+
+    switch {
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 1447px) {
+    @include pricing-container-in-lg-screen();
+    @include top-container-in-lg-screen();
+    @include buttom-container-in-lg-screen();
+
+    #form,
+    #pricing,
+    #list,
+    #button {
+        margin: 0;
+    }
+
+    switch {
+        margin: 0;
+    }
+
+}
